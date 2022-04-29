@@ -12,9 +12,14 @@ class Card extends Component {
 
   render() {
     return (
-      <article className='element' onClick={this.handleClick}>
-        <img className='element__image' src={this.props.card.link} alt={this.props.card.name} />
-        <button type='button' className='element__trash' aria-label='Удалить'></button>
+      <article className='element'>
+        <img
+          className='element__image'
+          src={this.props.card.link}
+          alt={this.props.card.name}
+          onClick={this.handleClick}
+        />
+        <button type='button' className='element__trash' aria-label='Удалить' onClick={this.props.onDelete}></button>
         <div className='element__caption-area'>
           <h2 className='element__name'>{this.props.card.name}</h2>
           <div className='element__likes'>

@@ -126,15 +126,19 @@ class App extends Component {
   };
 
   handleCardDelete = (card) => {
-    api.deleteCardApi(card._id).catch((err) => {
-      console.log(err);
-    });
-    const stateWithoutCard = this.state.cards.filter((stateCard) => {
-      return !(stateCard._id === card._id);
-    });
-    this.setState({
-      cards: stateWithoutCard,
-    });
+    api
+      .deleteCardApi(card._id)
+      .then((res) => {
+        const stateWithoutCard = this.state.cards.filter((stateCard) => {
+          return !(stateCard._id === card._id);
+        });
+        this.setState({
+          cards: stateWithoutCard,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   handleCardClick = (card) => {

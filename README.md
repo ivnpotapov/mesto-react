@@ -14,7 +14,7 @@ HTML, CSS, JS, React
 
 ### Ссылки
 
-Deploy [Mesto on GitHub Pages](https://ivnpotapov.github.io/how-to-learn/)
+Deploy [Mesto on GitHub Pages](https://ivnpotapov.github.io/mesto-react/)
 
 ### Инструкция по развёртыванию
 
